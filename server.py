@@ -21,27 +21,23 @@ class MemprosesClient(threading.Thread):
         		data = self.client_socket.recv(21)
             		if data:
 				message = message + data #collect seluruh data yang diterima
-				print "data : ",data
+				#print "data : ",data
 				#print "\n\n\n"
 				#print "message : ",message 
 				if (message == "GET /gambar1 HTTP/1.1" ) :
-					print "haha\n\n"
+					#print "haha\n\n"
 					self.client_socket.send(get_file('gambar1.jpg'))
 					break
 				elif (message == "GET /gambar2 HTTP/1.1" ) :
-					print "haha\n\n"
 					self.client_socket.send(get_file('gambar2.jpg'))
 					break
 				elif (message == "GET /gambar3 HTTP/1.1" ) :
-					print "haha\n\n"
 					self.client_socket.send(get_file('gambar3.jpg'))
 					break
 				elif (message == "GET /gambar4 HTTP/1.1" ) :
-					print "haha\n\n"
 					self.client_socket.send(get_file('gambar4.jpg'))
 					break
 				elif (message == "GET /gambar5 HTTP/1.1" ) :
-					print "haha\n\n"
 					self.client_socket.send(get_file('gambar5.jpg'))
 					break
 				elif (message.endswith("\r\n\r\n")):
